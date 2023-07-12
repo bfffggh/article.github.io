@@ -14,3 +14,16 @@ Article text
 <br><a href="https://github.com/bfffggh/articles">Source code</a>
 </p></strong>
 </body></center>
+<script>
+let name = document.cookie
+if (name === "") {
+var x = prompt("Type in your name for you to be greeted. (please allow notifications)");
+document.cookie = "name="+x;
+} else {var x = name.slice(5)};if (Notification.permission === "granted") {const notification = new Notification("Welcome, "+x+"!")} else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        const notification = new Notification("Welcome, "+x+"!");
+      }
+    });
+}
+</script>
