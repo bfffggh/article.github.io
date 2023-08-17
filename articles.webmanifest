@@ -1,0 +1,16 @@
+{
+  "name": "Articles",
+  "short_name": "articles",
+  "description": "Articles app that is available from the browser",
+  "icons": [
+    {
+      "src": "32_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/article.html",
+  "display": "minimal-ui",
+  "theme_color": "lightblue",
+  "background_color": "lightblue"
+}
