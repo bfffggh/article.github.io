@@ -1,14 +1,6 @@
 <link rel="manifest" href="/manifest.json">
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker registered with scope:', registration.scope);
-      })
-      .catch(function(error) {
-        console.error('Service Worker registration failed:', error);
-      });
-  }window.addEventListener('beforeinstallprompt', (event) => {
+window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault(); // Prevent automatic prompt
   const installButton = document.getElementById('install-button');
   installButton.style.display = 'block';
