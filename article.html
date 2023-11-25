@@ -1,22 +1,3 @@
-<link rel="manifest" href="/manifest.json">
-<script>
-window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault(); // Prevent automatic prompt
-  const installButton = document.getElementById('install-button');
-  installButton.style.display = 'block';
-
-  installButton.addEventListener('click', () => {
-    event.prompt(); // Show the installation prompt
-    event.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the installation');
-      } else {
-        console.log('User declined the installation');
-      }
-    });
-  });
-});
-</script>
 <link rel="icon" type="image/x-icon" href="favicon.ico"><title>Article name - Articles</title><p style="float:right">Other articles:</p><br style="margin:0.5em"><div style="float:right;border-radius:6px;border:2px solid #759cd9"><a href="article2.html"><center><img src="img2.bmp"></img></center>Article squids</a></div><br><br><br><div style="float:right;border-radius:6px;border:2px solid #759cd9"><a href="article3.html"><center><img src="img3.bmp"></img></center>The 'end' file</a></div><br><br><br><div style="float:right;border-radius:6px;border:2px solid #759cd9"><a href="article4.html"><center><img src="img4.bmp"></img></center>Bulbasaurs</a></div><br><br><br><div style="float:right;border-radius:6px;border:2px solid #759cd9"><a href="article5.html"><center><img src="img5.bmp"></img></center>Programs</a></div><br>
 <center><br><body class=article>
 <h1>Article name</h1>
@@ -24,7 +5,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 .article {
 background-color:lightblue;
 color:white;
-font-family:consolas;
+font-family:consolas,monospace;
 font-size:22px;
 }
 </style>
